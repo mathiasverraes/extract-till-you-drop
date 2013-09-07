@@ -12,7 +12,7 @@ final class Group
     private $id;
 
     /**
-     * @var array
+     * @var Pupil[]
      */
     private $pupils = array();
 
@@ -30,7 +30,7 @@ final class Group
     }
 
     /**
-     * @return array
+     * @return Pupil[]
      */
     public function getPupils()
     {
