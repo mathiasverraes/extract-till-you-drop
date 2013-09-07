@@ -21,6 +21,10 @@ final class Group
      */
     private $pupils = array();
 
+    public function __construct($id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return integer

@@ -14,6 +14,11 @@ final class Pupil
      */
     private $name;
 
+    public function __construct($id)
+    {
+        $this->id = $id;
+    }
+
 
     /**
      * @return integer
