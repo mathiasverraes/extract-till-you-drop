@@ -22,14 +22,6 @@ final class Group
     }
 
     /**
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
      * @return Pupil[]
      */
     public function getPupils()
