@@ -2,21 +2,36 @@
 
 namespace School;
 
+use School\Model\GroupRepository;
 use School\Model\PupilAlreadyInGroupException;
-use School\Persistence\DbGroupRepository;
-use School\Persistence\DbPupilRepository;
+use School\Model\PupilRepository;
 use School\Model\TooManyPupilsException;
 
 class GroupService
 {
+    /**
+     * @var GroupRepository
+     */
+    private $repository;
+
+    /**
+     * @var PupilRepository
+     */
+    private $pupilRepository;
+
+    public function __construct(GroupRepository $repository, PupilRepository $pupilRepository)
+    {
+        $this->repository = $repository;
+        $this->pupilRepository = $pupilRepository;
+    }
+
     public function add($id, $pupilId)
     {
-        $repository = DbGroupRepository::instance();
-        $group = $repository->find($id);
+        $group = $this->repository->find($id);
 
         $pupils = $group->getPupils();
         if (count($pupils) <= 5) {
-            $addPupil = DbPupilRepository::instance()->find($pupilId);
+            $addPupil = $this->pupilRepository->find($pupilId);
             $tmp = false;
             foreach ($pupils as $pupil) {
                 if ($pupil->getId() == $addPupil->getId()) {
@@ -25,7 +40,7 @@ class GroupService
             }
             if(!$tmp) {
                 $group->addPupil($addPupil);
-                $repository->persist($group);
+                $this->repository->persist($group);
             } else {
                 throw new PupilAlreadyInGroupException;
             }
