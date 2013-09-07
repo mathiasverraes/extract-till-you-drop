@@ -2,6 +2,7 @@
 
 namespace School;
 
+use School\Model\PupilAlreadyInGroupException;
 use School\Persistence\DbGroupRepository;
 use School\Persistence\DbPupilRepository;
 use School\Model\TooManyPupilsException;
@@ -25,6 +26,8 @@ class GroupService
             if(!$tmp) {
                 $group->addPupil($addPupil);
                 $repository->persist($group);
+            } else {
+                throw new PupilAlreadyInGroupException;
             }
         } else {
             throw new TooManyPupilsException();
