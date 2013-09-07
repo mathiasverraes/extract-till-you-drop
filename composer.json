@@ -1,0 +1,19 @@
+{
+    "name": "mathiasverraes/extract-till-you-drop",
+    "license": "MIT",
+    "type": "demo",
+    "description": "Extract Till You Drop presentation",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "stable"
+}
