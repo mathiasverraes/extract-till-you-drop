@@ -19,7 +19,7 @@ final class Group
     /**
      * @var array
      */
-    private $pupils;
+    private $pupils = array();
 
 
     /**
@@ -49,7 +49,7 @@ final class Group
     /**
      * @param $pupils
      */
-    public function setPupils($pupils)
+    public function setPupils(array $pupils)
     {
         $this->pupils = $pupils;
     }
