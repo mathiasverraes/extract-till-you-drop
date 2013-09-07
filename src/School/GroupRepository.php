@@ -1,14 +1,14 @@
 <?php
 
-namespace School\Model;
+namespace School;
 
-use School\Model\Group;
+use School\Group;
 
 interface GroupRepository
 {
     /**
      * @param int $id
-     * @return Group
+     * @return \School\Group
      */
     public function find($id);
 

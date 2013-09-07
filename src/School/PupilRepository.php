@@ -1,8 +1,8 @@
 <?php
 
-namespace School\Model;
+namespace School;
 
-use School\Model\Pupil;
+use School\Pupil;
 
 interface PupilRepository
 {

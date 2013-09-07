@@ -2,10 +2,10 @@
 
 namespace School;
 
-use School\Model\GroupRepository;
-use School\Model\PupilAlreadyInGroupException;
-use School\Model\PupilRepository;
-use School\Model\TooManyPupilsException;
+use School\GroupRepository;
+use School\PupilAlreadyInGroupException;
+use School\PupilRepository;
+use School\TooManyPupilsException;
 
 class GroupService
 {
@@ -30,8 +30,8 @@ class GroupService
         $group = $this->repository->find($id);
 
         $pupils = $group->getPupils();
+        $addPupil = $this->pupilRepository->find($pupilId);
         if (count($pupils) < 3) {
-            $addPupil = $this->pupilRepository->find($pupilId);
             $tmp = false;
             foreach ($pupils as $pupil) {
                 if ($pupil->getId() == $addPupil->getId()) {

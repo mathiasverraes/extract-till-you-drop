@@ -1,6 +1,6 @@
 <?php
 
-namespace School\Model;
+namespace School;
 
 use Exception;
 

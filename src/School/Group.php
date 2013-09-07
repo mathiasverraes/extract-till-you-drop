@@ -1,8 +1,10 @@
 <?php
 
-namespace School\Model;
+namespace School;
 
-final class Pupil
+use School\Pupil;
+
+final class Group
 {
     /**
      * @var integer
@@ -10,15 +12,14 @@ final class Pupil
     private $id;
 
     /**
-     * @var string
+     * @var array
      */
-    private $name;
+    private $pupils = array();
 
     public function __construct($id)
     {
         $this->id = $id;
     }
-
 
     /**
      * @return integer
@@ -29,18 +30,15 @@ final class Pupil
     }
 
     /**
-     * @param string $name
+     * @return array
      */
-    public function setName($name)
+    public function getPupils()
     {
-        $this->name = $name;
+        return $this->pupils;
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function addPupil(Pupil $pupil)
     {
-        return $this->name;
+        $this->pupils[] = $pupil;
     }
 }
