@@ -30,7 +30,7 @@ class GroupService
         $group = $this->repository->find($id);
 
         $pupils = $group->getPupils();
-        if (count($pupils) <= 5) {
+        if (count($pupils) < 3) {
             $addPupil = $this->pupilRepository->find($pupilId);
             $tmp = false;
             foreach ($pupils as $pupil) {
