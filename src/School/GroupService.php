@@ -38,7 +38,7 @@ class GroupService
                     $tmp = true;
                 }
             }
-            if(!$tmp) {
+            if (!$tmp) {
                 $group->addPupil($addPupil);
                 $this->repository->persist($group);
             } else {
