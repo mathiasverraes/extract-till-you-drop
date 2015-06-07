@@ -1,6 +1,30 @@
 <?php
-
 namespace School;
+
+$intro = <<<INTRO
+
+
+    "Extract Till You Drop"
+
+    Mathias Verraes
+    @mathiasverraes
+    verraes.net
+
+    Domain-Driven Design workshops
+    August 2015: Berlin, Ghent
+
+    Coupon "IPC" ➙ EUR —150
+    verraes.net/workshops
+
+    Domain-Driven Design Europe
+    Brussels, January 2016:
+    dddeurope.com
+
+
+
+INTRO;
+
+
 
 use School\GroupRepository;
 use School\PupilAlreadyInGroupException;
