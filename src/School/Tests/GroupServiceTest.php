@@ -14,6 +14,9 @@ use School\TooManyPupilsException;
 
 final class GroupServiceTest extends PHPUnit_Framework_TestCase
 {
+    public function __construct()
+    {
 
+    }
 }
  
