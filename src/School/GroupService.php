@@ -4,7 +4,7 @@ namespace School;
 $intro = <<<INTRO
 
 
-    "Extract Till You Drop"
+   "Extract Till You Drop"
 
     Mathias Verraes
     @mathiasverraes
@@ -15,6 +15,7 @@ $intro = <<<INTRO
 
     Coupon "IPC" ➙ EUR —150
     verraes.net/workshops
+
 
     Domain-Driven Design Europe
     Brussels, January 2016:
