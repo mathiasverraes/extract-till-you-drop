@@ -2,8 +2,8 @@
 
 namespace School\Tests;
 
-use PHPUnit_Framework_MockObject_MockObject;
-use PHPUnit_Framework_TestCase;
+
+use PHPUnit\Framework\TestCase;
 use School\Group;
 use School\GroupRepository;
 use School\GroupService;
@@ -12,11 +12,11 @@ use School\PupilAlreadyInGroupException;
 use School\PupilRepository;
 use School\TooManyPupilsException;
 
-final class GroupServiceTest extends PHPUnit_Framework_TestCase
+final class GroupServiceTest extends TestCase
 {
     public function __construct()
     {
-
+        parent::__construct();
     }
 }
  

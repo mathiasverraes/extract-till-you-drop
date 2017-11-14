@@ -2,12 +2,12 @@
     "name": "mathiasverraes/extract-till-you-drop",
     "license": "MIT",
     "type": "demo",
-    "description": "Extract Till You Drop presentation",
+    "description": "Extract Till You Drop",
     "autoload": {
         "psr-0": { "": "src/" }
     },
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=7.1"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
