@@ -1,6 +1,4 @@
-<?php
-namespace School;
-
+<?php declare(strict_types=1);
 /*
 
 
@@ -13,6 +11,7 @@ namespace School;
 
 */
 
+namespace School;
 
 use School\GroupRepository;
 use School\PupilAlreadyInGroupException;
