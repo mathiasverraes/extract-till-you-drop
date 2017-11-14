@@ -2,15 +2,9 @@
 
 namespace School;
 
-use School\Pupil;
-
 interface PupilRepository
 {
-    /**
-     * @param int $id
-     * @return Pupil
-     */
-    public function find($id);
+    public function find(int $id) : Pupil;
 
-    public function persist(Pupil $pupil);
+    public function persist(Pupil $pupil) : void;
 }

@@ -13,11 +13,6 @@
 
 namespace School;
 
-use School\GroupRepository;
-use School\PupilAlreadyInGroupException;
-use School\PupilRepository;
-use School\TooManyPupilsException;
-
 class GroupService
 {
     /**

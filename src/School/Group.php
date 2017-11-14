@@ -2,21 +2,16 @@
 
 namespace School;
 
-use School\Pupil;
-
 final class Group
 {
-    /**
-     * @var integer
-     */
     private $id;
 
     /**
      * @var Pupil[]
      */
-    private $pupils = array();
+    private $pupils = [];
 
-    public function __construct($id)
+    public function __construct(int $id)
     {
         $this->id = $id;
     }
@@ -24,12 +19,12 @@ final class Group
     /**
      * @return Pupil[]
      */
-    public function getPupils()
+    public function getPupils() : array
     {
         return $this->pupils;
     }
 
-    public function addPupil(Pupil $pupil)
+    public function addPupil(Pupil $pupil) : void
     {
         $this->pupils[] = $pupil;
     }

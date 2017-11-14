@@ -9,7 +9,7 @@ final class Pupil
      */
     private $id;
 
-    public function __construct($id)
+    public function __construct(int $id)
     {
         $this->id = $id;
     }
@@ -18,7 +18,7 @@ final class Pupil
     /**
      * @return integer
      */
-    public function getId()
+    public function getId() : int
     {
         return $this->id;
     }

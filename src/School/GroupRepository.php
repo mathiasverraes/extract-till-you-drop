@@ -2,15 +2,9 @@
 
 namespace School;
 
-use School\Group;
-
 interface GroupRepository
 {
-    /**
-     * @param int $id
-     * @return \School\Group
-     */
-    public function find($id);
+    public function find(int $id) : Group;
 
-    public function persist(Group $group);
+    public function persist(Group $group) : void;
 }
