@@ -2,7 +2,7 @@
 
 namespace School;
 
-final class Group
+class Group
 {
     private $id;
 

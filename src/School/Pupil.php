@@ -2,7 +2,7 @@
 
 namespace School;
 
-final class Pupil
+class Pupil
 {
     /**
      * @var integer
