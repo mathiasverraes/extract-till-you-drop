@@ -42,11 +42,9 @@ final class GroupServiceTest extends TestCase {
 
         $this->groupRepository = $this->prophesize(GroupRepository::class);
         $this->group = new Group(self::GROUP_ID);
-        $this->groupRepository->find(self::GROUP_ID)->willReturn($this->group);
 
         $this->pupil = new Pupil(self::PUPIL_ID);
         $this->pupilRepository = $this->prophesize(PupilRepository::class);
-        $this->pupilRepository->find(self::PUPIL_ID)->willReturn($this->pupil);
 
         $this->SUT = new GroupService($this->groupRepository->reveal(), $this->pupilRepository->reveal());
     }
