@@ -48,7 +48,6 @@ class GroupService
             }
         } else {
             throw new TooManyPupilsException();
+        }
     }
-
-}
 }
