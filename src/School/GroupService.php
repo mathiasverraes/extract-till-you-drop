@@ -15,14 +15,10 @@ namespace School;
 
 class GroupService
 {
-    /**
-     * @var GroupRepository
-     */
+    /** @var GroupRepository */
     private $repository;
 
-    /**
-     * @var PupilRepository
-     */
+    /** @var PupilRepository */
     private $pupilRepository;
 
     public function __construct(GroupRepository $repository, PupilRepository $pupilRepository)

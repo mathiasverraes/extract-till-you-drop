@@ -17,14 +17,10 @@ final class GroupServiceTest extends TestCase {
     const GROUP_ID = 123;
     const PUPIL_ID = 456;
 
-    /**
-     * @var Pupil
-     */
+    /** @var Pupil */
     private $pupil;
 
-    /**
-     * @var Group
-     */
+    /** @var Group */
     private $group;
 
     /** @var GroupService */
