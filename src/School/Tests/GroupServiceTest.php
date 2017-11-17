@@ -33,14 +33,13 @@ final class GroupServiceTest extends TestCase {
     protected function setUp () {
         parent::setUp();
 
+        $this->group = new Group(123);
         $this->groupRepository = $this->prophesize(GroupRepository::class);
-        $this->group = new Group(self::GROUP_ID);
 
-        $this->pupil = new Pupil(self::PUPIL_ID);
+        $this->pupil = new Pupil(456);
         $this->pupilRepository = $this->prophesize(PupilRepository::class);
-
+        /** @noinspection PhpParamsInspection */
         $this->groupService = new GroupService($this->groupRepository->reveal(), $this->pupilRepository->reveal());
     }
-
 
 }
