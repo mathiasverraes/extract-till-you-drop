@@ -16,4 +16,14 @@ Rules:
 - Try to express insights about the code in the code
 - After 30m or so, compare with other teams, and try again.   
 
+## Install
+
+Get [composer](https://getcomposer.org/download/), then run
+
+```
+composer install
+bin/phpunit
+```
+
+You should get a warning because there are no tests yet.
 
