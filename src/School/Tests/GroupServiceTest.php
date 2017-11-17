@@ -14,9 +14,6 @@ use School\TooManyPupilsException;
 
 final class GroupServiceTest extends TestCase {
 
-    const GROUP_ID = 123;
-    const PUPIL_ID = 456;
-
     /** @var Pupil */
     private $pupil;
 
@@ -24,7 +21,7 @@ final class GroupServiceTest extends TestCase {
     private $group;
 
     /** @var GroupService */
-    private $SUT;
+    private $groupService;
 
     /** @var  GroupRepository | ObjectProphecy */
     private $groupRepository;
@@ -42,7 +39,7 @@ final class GroupServiceTest extends TestCase {
         $this->pupil = new Pupil(self::PUPIL_ID);
         $this->pupilRepository = $this->prophesize(PupilRepository::class);
 
-        $this->SUT = new GroupService($this->groupRepository->reveal(), $this->pupilRepository->reveal());
+        $this->groupService = new GroupService($this->groupRepository->reveal(), $this->pupilRepository->reveal());
     }
 
 
