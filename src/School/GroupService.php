@@ -1,15 +1,4 @@
 <?php declare(strict_types=1);
-/*
-
-
-   "Extract Till You Drop"
-
-    Mathias Verraes
-    @mathiasverraes
-    verraes.net
-
-
-*/
 
 namespace School;
 
