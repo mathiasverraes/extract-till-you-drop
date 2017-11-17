@@ -3,6 +3,7 @@
 namespace School\Tests;
 
 use PHPUnit\Framework\TestCase;
+use Prophecy\Prophecy\ObjectProphecy;
 use School\Group;
 use School\GroupRepository;
 use School\GroupService;
@@ -13,7 +14,42 @@ use School\TooManyPupilsException;
 
 final class GroupServiceTest extends TestCase {
 
+    const GROUP_ID = 123;
+    const PUPIL_ID = 456;
+
+    /**
+     * @var Pupil
+     */
+    private $pupil;
+
+    /**
+     * @var Group
+     */
+    private $group;
+
+    /** @var GroupService */
+    private $SUT;
+
+    /** @var  GroupRepository | ObjectProphecy */
+    private $groupRepository;
+
+    /** @var  PupilRepository | ObjectProphecy */
+    private $pupilRepository;
+
+
     protected function setUp () {
         parent::setUp();
+
+        $this->groupRepository = $this->prophesize(GroupRepository::class);
+        $this->group = new Group(self::GROUP_ID);
+        $this->groupRepository->find(self::GROUP_ID)->willReturn($this->group);
+
+        $this->pupil = new Pupil(self::PUPIL_ID);
+        $this->pupilRepository = $this->prophesize(PupilRepository::class);
+        $this->pupilRepository->find(self::PUPIL_ID)->willReturn($this->pupil);
+
+        $this->SUT = new GroupService($this->groupRepository->reveal(), $this->pupilRepository->reveal());
     }
+
+
 }
